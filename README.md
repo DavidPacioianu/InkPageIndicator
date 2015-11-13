@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.davidpacioianu:inkpageindicator:1.0.0'
+    compile 'com.pacioianu.david:ink-page-indicator:1.0.0'
 }
 ```
 

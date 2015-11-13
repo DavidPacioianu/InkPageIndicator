@@ -2,6 +2,45 @@
 
 InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutcher/plaid and backported by me for API 16+ (4.1+)
 
+# Usage
+
+```gradle
+repositories {
+    maven {
+        url  "http://dl.bintray.com/davidpacioianu/maven" 
+    }
+}
+
+dependencies {
+    compile 'com.commit451:inkpageindicator:1.0.2'
+}
+```
+
+```xml
+<com.davidpacioianu.inkpageindicator.InkPageIndicator
+  android:id="@+id/indicator"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"/>
+```
+
+It has some custom attributes:
+```xml
+<com.davidpacioianu.inkpageindicator.InkPageIndicator
+  android:id="@+id/indicator"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:dotDiameter="8dp"
+  app:dotGap="8dp"
+  app:animationDuration="300"
+  app:pageIndicatorColor="@color/gray"
+  app:currentPageIndicatorColor="@color/black"/>
+```
+
+```java
+InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
+inkPageIndicator.setViewPager(viewPager);
+```
+
 License
 --------
 

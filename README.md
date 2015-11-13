@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.commit451:inkpageindicator:1.0.2'
+    compile 'com.davidpacioianu:inkpageindicator:1.0.0'
 }
 ```
 
@@ -23,7 +23,7 @@ dependencies {
   android:layout_height="wrap_content"/>
 ```
 
-It has some custom attributes:
+or with custom attributes:
 ```xml
 <com.davidpacioianu.inkpageindicator.InkPageIndicator
   android:id="@+id/indicator"
@@ -35,7 +35,8 @@ It has some custom attributes:
   app:pageIndicatorColor="@color/gray"
   app:currentPageIndicatorColor="@color/black"/>
 ```
-
+ and 
+ 
 ```java
 InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
 inkPageIndicator.setViewPager(viewPager);

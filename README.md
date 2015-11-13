@@ -2,7 +2,7 @@
 
 InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutcher/plaid and backported by me for API 16+ (4.1+)
 
-![InkPageIndicator Preview](http://gfycat.com/AbleEmbellishedKillerwhale)
+![InkPageIndicator Preview](http://gfycat.com/AbleEmbellishedKillerwhale.gif)
 
  [ ![Download](https://api.bintray.com/packages/davidpacioianu/maven/ink-page-indicator/images/download.svg) ](https://bintray.com/davidpacioianu/maven/ink-page-indicator/_latestVersion)
 

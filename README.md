@@ -9,12 +9,6 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 # Usage
 
 ```gradle
-repositories {
-    maven {
-        url  "http://dl.bintray.com/davidpacioianu/maven" 
-    }
-}
-
 dependencies {
     compile 'com.pacioianu.david:ink-page-indicator:1.0.0'
 }

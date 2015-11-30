@@ -29,7 +29,7 @@ or with custom attributes:
   android:layout_height="wrap_content"
   app:dotDiameter="8dp"
   app:dotGap="8dp"
-  app:animationDuration="300"
+  app:animationDuration="320"
   app:pageIndicatorColor="@color/gray"
   app:currentPageIndicatorColor="@color/black"/>
 ```

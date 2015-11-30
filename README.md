@@ -10,7 +10,7 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 
 ```gradle
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.0.1'
+    compile 'com.pacioianu.david:ink-page-indicator:1.0.0'
 }
 ```
 

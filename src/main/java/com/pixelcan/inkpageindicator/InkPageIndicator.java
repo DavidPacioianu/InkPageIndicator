@@ -33,6 +33,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Interpolator;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import java.util.Arrays;
 
 
@@ -150,8 +151,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         unselectedPaint.setColor(unselectedColour);
         selectedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         selectedPaint.setColor(selectedColour);
-        interpolator = android.view.animation.AnimationUtils.loadInterpolator(context,
-                android.R.interpolator.fast_out_slow_in);
+        interpolator = new FastOutSlowInInterpolator();
 
         // create paths & rect now – reuse & rewind later
         combinedUnselectedPath = new Path();

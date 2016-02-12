@@ -15,12 +15,12 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 
 ```gradle
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.0.1'
+    compile 'com.pacioianu.david:ink-page-indicator:1.1.0'
 }
 ```
 
 ```xml
-<com.davidpacioianu.inkpageindicator.InkPageIndicator
+<com.pixelcan.inkpageindicator.InkPageIndicator
   android:id="@+id/indicator"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"/>
@@ -28,7 +28,7 @@ dependencies {
 
 or with custom attributes:
 ```xml
-<com.davidpacioianu.inkpageindicator.InkPageIndicator
+<com.pixelcan.inkpageindicator.InkPageIndicator
   android:id="@+id/indicator"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"

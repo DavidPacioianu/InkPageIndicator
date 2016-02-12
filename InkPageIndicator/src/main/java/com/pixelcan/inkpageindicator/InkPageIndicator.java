@@ -28,6 +28,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -38,7 +40,7 @@ import java.util.Arrays;
 
 
 /**
- * Created by davidpacioianu on 11/11/15.
+ * Created by David Pacioianu on 11/11/15.
  */
 
 
@@ -140,9 +142,9 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         animDuration = (long) a.getInteger(R.styleable.InkPageIndicator_animationDuration,
                 DEFAULT_ANIM_DURATION);
         animHalfDuration = animDuration / 2;
-        unselectedColour = a.getColor( R.styleable.InkPageIndicator_pageIndicatorColor,
+        unselectedColour = a.getColor(R.styleable.InkPageIndicator_pageIndicatorColor,
                 DEFAULT_UNSELECTED_COLOUR);
-        selectedColour = a.getColor( R.styleable.InkPageIndicator_currentPageIndicatorColor,
+        selectedColour = a.getColor(R.styleable.InkPageIndicator_currentPageIndicatorColor,
                 DEFAULT_SELECTED_COLOUR);
 
         a.recycle();
@@ -349,20 +351,19 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
     }
 
     /**
-     *
      * Unselected dots can be in 6 states:
-     *
+     * <p>
      * #1 At rest
      * #2 Joining neighbour, still separate
      * #3 Joining neighbour, combined curved
      * #4 Joining neighbour, combined straight
      * #5 Join retreating
      * #6 Dot re-showing / revealing
-     *
+     * <p>
      * It can also be in a combination of these states e.g. joining one neighbour while
      * retreating from another.  We therefore create a Path so that we can examine each
      * dot pair separately and later take the union for these cases.
-     *
+     * <p>
      * This function returns a path for the given dot **and any action to it's right** e.g. joining
      * or retreating from it's neighbour
      *
@@ -767,6 +768,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                     retreatingJoinX2 = initialX2;
                     postInvalidateOnAnimation();
                 }
+
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     retreatingJoinX1 = INVALID_FRACTION;
@@ -849,5 +851,53 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         boolean shouldStart(float currentValue) {
             return currentValue < thresholdValue;
         }
+    }
+
+    @Override
+    public void onRestoreInstanceState(Parcelable state) {
+        SavedState savedState = (SavedState) state;
+        super.onRestoreInstanceState(savedState.getSuperState());
+        currentPage = savedState.currentPage;
+        requestLayout();
+    }
+
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Parcelable superState = super.onSaveInstanceState();
+        SavedState savedState = new SavedState(superState);
+        savedState.currentPage = currentPage;
+        return savedState;
+    }
+
+    static class SavedState extends BaseSavedState {
+        int currentPage;
+
+        public SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        private SavedState(Parcel in) {
+            super(in);
+            currentPage = in.readInt();
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeInt(currentPage);
+        }
+
+        @SuppressWarnings("UnusedDeclaration")
+        public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() {
+            @Override
+            public SavedState createFromParcel(Parcel in) {
+                return new SavedState(in);
+            }
+
+            @Override
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
     }
 }

@@ -30,12 +30,14 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Interpolator;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
+
 import java.util.Arrays;
 
 
@@ -608,7 +610,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                 // todo avoid autoboxing
                 selectedDotX = (Float) valueAnimator.getAnimatedValue();
                 retreatAnimation.startIfNecessary(selectedDotX);
-                postInvalidateOnAnimation();
+                ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
             }
         });
         moveSelected.addListener(new AnimatorListenerAdapter() {
@@ -642,18 +644,20 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
             }
 
             joiningFractions[leftDot] = fraction;
-            postInvalidateOnAnimation();
+            ViewCompat.postInvalidateOnAnimation(this);
+            ;
         }
     }
 
     private void clearJoiningFractions() {
         Arrays.fill(joiningFractions, 0f);
-        postInvalidateOnAnimation();
+        ViewCompat.postInvalidateOnAnimation(this);
     }
 
     private void setDotRevealFraction(int dot, float fraction) {
         dotRevealFractions[dot] = fraction;
-        postInvalidateOnAnimation();
+        ViewCompat.postInvalidateOnAnimation(this);
+        ;
     }
 
     private void cancelJoiningAnimations() {
@@ -726,7 +730,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                     public void onAnimationUpdate(ValueAnimator valueAnimator) {
                         // todo avoid autoboxing
                         retreatingJoinX1 = (Float) valueAnimator.getAnimatedValue();
-                        postInvalidateOnAnimation();
+                        ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
                         // start any reveal animations if we've passed them
                         for (PendingRevealAnimator pendingReveal : revealAnimations) {
                             pendingReveal.startIfNecessary(retreatingJoinX1);
@@ -746,7 +750,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                     public void onAnimationUpdate(ValueAnimator valueAnimator) {
                         // todo avoid autoboxing
                         retreatingJoinX2 = (Float) valueAnimator.getAnimatedValue();
-                        postInvalidateOnAnimation();
+                        ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
                         // start any reveal animations if we've passed them
                         for (PendingRevealAnimator pendingReveal : revealAnimations) {
                             pendingReveal.startIfNecessary(retreatingJoinX2);
@@ -766,14 +770,14 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                     }
                     retreatingJoinX1 = initialX1;
                     retreatingJoinX2 = initialX2;
-                    postInvalidateOnAnimation();
+                    ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
                 }
 
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     retreatingJoinX1 = INVALID_FRACTION;
                     retreatingJoinX2 = INVALID_FRACTION;
-                    postInvalidateOnAnimation();
+                    ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
                 }
             });
         }
@@ -804,7 +808,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     setDotRevealFraction(PendingRevealAnimator.this.dot, 0f);
-                    postInvalidateOnAnimation();
+                    ViewCompat.postInvalidateOnAnimation(InkPageIndicator.this);
                 }
             });
         }

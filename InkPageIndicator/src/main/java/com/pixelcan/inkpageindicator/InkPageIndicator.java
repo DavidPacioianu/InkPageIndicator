@@ -640,7 +640,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         if (leftDot < joiningFractions.length) {
 
             if (leftDot == 1) {
-                Log.d("PageIndicator", "dot 1 fraction:\t" + fraction);
+                //Log.d("PageIndicator", "dot 1 fraction:\t" + fraction);
             }
 
             joiningFractions[leftDot] = fraction;
@@ -655,9 +655,10 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
     }
 
     private void setDotRevealFraction(int dot, float fraction) {
-        dotRevealFractions[dot] = fraction;
+        if(dot < dotRevealFractions.length) {
+            dotRevealFractions[dot] = fraction;
+        }
         ViewCompat.postInvalidateOnAnimation(this);
-        ;
     }
 
     private void cancelJoiningAnimations() {

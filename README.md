@@ -9,7 +9,7 @@
 InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutcher/plaid and backported by me for API 14+ (4.0+)
 
 <h3>InkPageIndicator Preview</h3>
-![]("http://i.imgur.com/fRgDXWK.gif")
+![](http://i.imgur.com/fRgDXWK.gif)
 
 # Usage
 

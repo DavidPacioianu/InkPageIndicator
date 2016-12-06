@@ -45,6 +45,13 @@ InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicat
 inkPageIndicator.setViewPager(viewPager);
 ```
 
+##Apps using the InkPageIndicator
+(feel free to send me your project)
+
+Icon | Application
+------------ | -------------
+<img src="https://goo.gl/6Xodnf" width="48" height="48" /> | [Udacity](https://play.google.com/store/apps/details?id=com.udacity.android) <alt="width="40" height="40" />
+
 License
 --------
 

@@ -256,7 +256,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
     }
 
     private void resetState() {
-        joiningFractions = new float[pageCount - 1];
+        joiningFractions = new float[pageCount == 0 ? 0 : (pageCount - 1)];
         Arrays.fill(joiningFractions, 0f);
         dotRevealFractions = new float[pageCount];
         Arrays.fill(dotRevealFractions, 0f);
@@ -559,7 +559,7 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
     }
 
     private void setSelectedPage(int now) {
-        if (now == currentPage) return;
+        if (now == currentPage || dotCenterX == null) return;
 
         pageChanging = true;
         previousPage = currentPage;

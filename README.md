@@ -55,6 +55,7 @@ Icon | Application
 <img src="https://goo.gl/Nf6TxW" width="48" height="48" /> | [Stickchat](https://play.google.com/store/apps/details?id=com.timmystudios.stickchat) <alt="width="40" height="40" />
 |
 <img src="https://goo.gl/zgmGIZ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally) <alt="width="40" height="40" />
+<img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding) <alt="width="40" height="40" />
 
 License
 --------

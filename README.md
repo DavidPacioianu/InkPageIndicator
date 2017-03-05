@@ -57,11 +57,13 @@ Icon | Application
 <img src="https://goo.gl/zgmGIZ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally) <alt="width="40" height="40" />
 |
 <img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding) <alt="width="40" height="40" />
+|
+<img src="https://goo.gl/9Zl4mC" width="48" height="48" /> | [Frame](https://play.google.com/store/apps/details?id=com.cwfei.frame) <alt="width="40" height="40" />
 
 License
 --------
 
-    Copyright 2016 David Păcioianu
+    Copyright 2017 David Păcioianu
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

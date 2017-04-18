@@ -50,15 +50,11 @@ inkPageIndicator.setViewPager(viewPager);
 
 Icon | Application
 ------------ | -------------
-<img src="https://goo.gl/6Xodnf" width="48" height="48" /> | [Udacity](https://play.google.com/store/apps/details?id=com.udacity.android) <alt="width="40" height="40" />
-|
-<img src="https://goo.gl/Nf6TxW" width="48" height="48" /> | [Stickchat](https://play.google.com/store/apps/details?id=com.timmystudios.stickchat) <alt="width="40" height="40" />
-|
-<img src="https://goo.gl/zgmGIZ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally) <alt="width="40" height="40" />
-|
-<img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding) <alt="width="40" height="40" />
-|
-<img src="https://goo.gl/9Zl4mC" width="48" height="48" /> | [Frame](https://play.google.com/store/apps/details?id=com.cwfei.frame) <alt="width="40" height="40" />
+<img src="https://goo.gl/QrCvNu" width="48" height="48" /> | [Udacity](https://play.google.com/store/apps/details?id=com.udacity.android) 
+<img src="https://goo.gl/4i6lVV" width="48" height="48" /> | [Stickchat](https://play.google.com/store/apps/details?id=com.timmystudios.stickchat) 
+<img src="https://goo.gl/ZtSdKQ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally)
+<img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding)
+<img src="https://goo.gl/PNN4yC" width="48" height="48" /> | [Frame](https://play.google.com/store/apps/details?id=com.cwfei.frame) 
 
 License
 --------

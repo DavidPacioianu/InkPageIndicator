@@ -56,7 +56,7 @@ Icon | Application
 <img src="https://goo.gl/ZtSdKQ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally)
 <img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding)
 <img src="https://goo.gl/PNN4yC" width="48" height="48" /> | [Frame](https://play.google.com/store/apps/details?id=com.cwfei.frame) 
-<img src="https://goo.gl/VkBZ9B" width="48" height="48" /> | [Animex Wallpaper](https://play.google.com/store/apps/details?id=net.xblacky.animexwallpaper) 
+<img src="https://goo.gl/wpVss6" width="48" height="48" /> | [Touch for Facebook](https://play.google.com/store/apps/details?id=com.fa.touch.free) 
 
 License
 --------

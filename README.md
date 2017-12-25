@@ -46,7 +46,7 @@ InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicat
 inkPageIndicator.setViewPager(viewPager);
 ```
 
-##Apps using the InkPageIndicator
+## Apps using the InkPageIndicator
 (feel free to send me your project)
 
 Icon | Application

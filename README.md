@@ -15,8 +15,14 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 # Usage
 
 ```gradle
+repositories {
+    maven {
+        url  "https://dl.bintray.com/vexigon/maven"
+    }
+}
+
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
+    compile 'com.vexigon:ink-page-indicator:1.3.0'
 }
 ```
 

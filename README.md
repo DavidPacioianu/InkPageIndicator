@@ -3,10 +3,10 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-InkPageIndicator-green.svg?style=true)](https://android-arsenal.com/details/1/2932) 
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](http://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg)](https://android-arsenal.com/api?level=14)
-[ ![Download](https://api.bintray.com/packages/davidpacioianu/maven/ink-page-indicator/images/download.svg) ](https://bintray.com/davidpacioianu/maven/ink-page-indicator/_latestVersion)
+[![Download](https://api.bintray.com/packages/vexigon/maven/InkPagerIndicator/images/download.svg) ](https://bintray.com/vexigon/maven/InkPagerIndicator/_latestVersion)
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/DavidPacioianu/InkPageIndicator/master/LICENSE) 
 
-InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutcher/plaid and backported by me for API 14+ (4.0+)
+InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutcher/plaid and backported by @DavidPacioianu for API 14+ (4.0+). Forked and reuploaded with updated dependencies as the original project seemed abandoned.
 
 <h3>InkPageIndicator Preview</h3>
 
@@ -15,8 +15,14 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 # Usage
 
 ```gradle
+repositories {
+    maven {
+        url  "https://dl.bintray.com/vexigon/maven"
+    }
+}
+
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
+    compile 'com.vexigon:ink-page-indicator:1.3.0'
 }
 ```
 

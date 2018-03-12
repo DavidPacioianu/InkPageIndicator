@@ -16,7 +16,7 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 
 ```gradle
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
+    compile 'com.pacioianu.david:ink-page-indicator:1.3.0'
 }
 ```
 
@@ -33,11 +33,11 @@ or with custom attributes:
   android:id="@+id/indicator"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  app:dotDiameter="8dp"
-  app:dotGap="8dp"
-  app:animationDuration="320"
-  app:pageIndicatorColor="@color/gray"
-  app:currentPageIndicatorColor="@color/black"/>
+  app:ipi_dotDiameter="8dp"
+  app:ipi_dotGap="8dp"
+  app:ipi_animationDuration="320"
+  app:ipi_pageIndicatorColor="@android:color/darker_gray"
+  app:ipi_currentPageIndicatorColor="@android:color/black"/>
 ```
  and 
  
@@ -61,7 +61,7 @@ Icon | Application
 License
 --------
 
-    Copyright 2017 David Păcioianu
+    Copyright 2018 David Păcioianu
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

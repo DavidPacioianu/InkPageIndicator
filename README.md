@@ -26,8 +26,13 @@ dependencies {
   android:layout_width="match_parent"
   android:layout_height="wrap_content"/>
 ```
+ and 
+```java
+InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
+inkPageIndicator.setViewPager(viewPager);
+```
 
-or with custom attributes:
+#### Custom attributes:
 ```xml
 <com.pixelcan.inkpageindicator.InkPageIndicator
   android:id="@+id/indicator"
@@ -39,12 +44,7 @@ or with custom attributes:
   app:ipi_pageIndicatorColor="@android:color/darker_gray"
   app:ipi_currentPageIndicatorColor="@android:color/black"/>
 ```
- and 
- 
-```java
-InkPageIndicator inkPageIndicator = (InkPageIndicator) findViewById(R.id.indicator);
-inkPageIndicator.setViewPager(viewPager);
-```
+> **Note:** Starting from version 1.3.0 we added the **_ipi__** prefix to the name of the attributes.
 
 ## Apps using the InkPageIndicator
 (feel free to send me your project)

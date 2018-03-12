@@ -135,18 +135,18 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.InkPageIndicator, defStyle, 0);
 
-        dotDiameter = a.getDimensionPixelSize(R.styleable.InkPageIndicator_dotDiameter,
+        dotDiameter = a.getDimensionPixelSize(R.styleable.InkPageIndicator_ipi_dotDiameter,
                 DEFAULT_DOT_SIZE * density);
         dotRadius = dotDiameter / 2;
         halfDotRadius = dotRadius / 2;
-        gap = a.getDimensionPixelSize(R.styleable.InkPageIndicator_dotGap,
+        gap = a.getDimensionPixelSize(R.styleable.InkPageIndicator_ipi_dotGap,
                 DEFAULT_GAP * density);
-        animDuration = (long) a.getInteger(R.styleable.InkPageIndicator_animationDuration,
+        animDuration = (long) a.getInteger(R.styleable.InkPageIndicator_ipi_animationDuration,
                 DEFAULT_ANIM_DURATION);
         animHalfDuration = animDuration / 2;
-        unselectedColour = a.getColor(R.styleable.InkPageIndicator_pageIndicatorColor,
+        unselectedColour = a.getColor(R.styleable.InkPageIndicator_ipi_pageIndicatorColor,
                 DEFAULT_UNSELECTED_COLOUR);
-        selectedColour = a.getColor(R.styleable.InkPageIndicator_currentPageIndicatorColor,
+        selectedColour = a.getColor(R.styleable.InkPageIndicator_ipi_currentPageIndicatorColor,
                 DEFAULT_SELECTED_COLOUR);
 
         a.recycle();
@@ -645,7 +645,6 @@ public class InkPageIndicator extends View implements ViewPager.OnPageChangeList
 
             joiningFractions[leftDot] = fraction;
             ViewCompat.postInvalidateOnAnimation(this);
-            ;
         }
     }
 

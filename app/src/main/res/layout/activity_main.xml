@@ -16,9 +16,9 @@
         android:padding="10dip"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        app:dotDiameter="8dp"
-        app:dotGap="8dp"
-        app:animationDuration="320"
-        app:pageIndicatorColor="@android:color/darker_gray"
-        app:currentPageIndicatorColor="@android:color/black"/>
+        app:ipi_dotDiameter="8dp"
+        app:ipi_dotGap="8dp"
+        app:ipi_animationDuration="320"
+        app:ipi_pageIndicatorColor="@android:color/darker_gray"
+        app:ipi_currentPageIndicatorColor="@android:color/black"/>
 </LinearLayout>

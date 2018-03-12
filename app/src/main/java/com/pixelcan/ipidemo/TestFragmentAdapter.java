@@ -18,7 +18,7 @@ import android.widget.TextView;
 class TestFragmentAdapter extends FragmentPagerAdapter {
     protected static final String[] CONTENT = new String[]{"This", "Is", "A", "Test",};
 
-    private int mCount = CONTENT.length;
+    private int mCount = 8;
 
     public TestFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -39,13 +39,6 @@ class TestFragmentAdapter extends FragmentPagerAdapter {
         return TestFragmentAdapter.CONTENT[position % CONTENT.length];
     }
 
-    public void setCount(int count) {
-        if (count > 0 && count <= 10) {
-            mCount = count;
-            notifyDataSetChanged();
-        }
-    }
-
     public static final class TestFragment extends Fragment {
         private static final String KEY_CONTENT = "TestFragment:Content";
 
@@ -53,7 +46,7 @@ class TestFragmentAdapter extends FragmentPagerAdapter {
             TestFragment fragment = new TestFragment();
 
             StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < 20; i++) {
+            for (int i = 0; i < 10; i++) {
                 builder.append(content).append(" ");
             }
             builder.deleteCharAt(builder.length() - 1);

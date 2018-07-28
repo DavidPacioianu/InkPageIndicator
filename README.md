@@ -16,7 +16,7 @@ InkPageIndicator created by @nickbutcher for Plaid https://github.com/nickbutche
 
 ```gradle
 dependencies {
-    compile 'com.pacioianu.david:ink-page-indicator:1.3.0'
+    implementation 'com.pacioianu.david:ink-page-indicator:1.3.0'
 }
 ```
 

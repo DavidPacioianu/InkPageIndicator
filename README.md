@@ -46,18 +46,6 @@ inkPageIndicator.setViewPager(viewPager);
 ```
 > **Note:** Starting from version 1.3.0 we added the **_ipi__** prefix to the name of the attributes.
 
-## Apps using the InkPageIndicator
-(feel free to send me your project)
-
-Icon | Application
------------- | -------------
-<img src="https://goo.gl/QrCvNu" width="48" height="48" /> | [Udacity](https://play.google.com/store/apps/details?id=com.udacity.android) 
-<img src="https://goo.gl/4i6lVV" width="48" height="48" /> | [Stickchat](https://play.google.com/store/apps/details?id=com.timmystudios.stickchat) 
-<img src="https://goo.gl/ZtSdKQ" width="48" height="48" /> | [Wally](https://play.google.com/store/apps/details?id=com.brocoli.wally)
-<img src="https://goo.gl/MZRSab" width="48" height="48" /> | [Material-Onboarding](https://github.com/Vexigon/Material-Onboarding)
-<img src="https://goo.gl/PNN4yC" width="48" height="48" /> | [Frame](https://play.google.com/store/apps/details?id=com.cwfei.frame) 
-<img src="https://goo.gl/wpVss6" width="48" height="48" /> | [Touch for Facebook](https://play.google.com/store/apps/details?id=com.fa.touch.free) 
-
 License
 --------
 
